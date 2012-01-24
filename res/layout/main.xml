@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_scroll_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <AbsoluteLayout 
+        android:id="@+id/test_linear_layout_view"
+        android:orientation="horizontal"
+		android:background="@android:color/holo_blue_bright"
+        android:layout_gravity="center"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent">
+		  <!-- Left -->
+		  <LinearLayout 
+		      android:id="@+id/left_layout" 
+		      android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
+		      android:layout_width="wrap_content" android:layout_height="match_parent">
+		      <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="left view" android:gravity="center"
+		          />
+		  </LinearLayout>
+		  <!--  Right -->
+		  <LinearLayout 
+		      android:id="@+id/right_layout" android:layout_x="450dp"
+		      android:orientation="vertical" android:layout_gravity="center" android:background="#00ff00"
+		      android:layout_width="wrap_content" android:layout_height="match_parent">
+   		      <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="right view" android:gravity="center"
+   		          />
+		  </LinearLayout>  
+      </AbsoluteLayout>
+</HorizontalScrollView>
