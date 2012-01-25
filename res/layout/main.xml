@@ -4,7 +4,7 @@
     android:id="@+id/test_scroll_view"
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
-    <AbsoluteLayout 
+    <com.spidermuffin.view.SlidingLayout 
         android:id="@+id/test_linear_layout_view"
         android:orientation="horizontal"
 		android:background="@android:color/holo_blue_bright"
@@ -15,7 +15,7 @@
 		  <LinearLayout 
 		      android:id="@+id/left_layout" 
 		      android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
-		      android:layout_width="wrap_content" android:layout_height="match_parent">
+		      android:layout_width="500dp" android:layout_height="match_parent">
 		      <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="left view" android:gravity="center"
 		          />
 		  </LinearLayout>
@@ -27,5 +27,5 @@
    		      <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="right view" android:gravity="center"
    		          />
 		  </LinearLayout>  
-      </AbsoluteLayout>
+      </com.spidermuffin.view.SlidingLayout>
 </HorizontalScrollView>
