@@ -46,7 +46,7 @@ public class SlidingLayout extends ViewGroup {
 		width = currentWidth + getPaddingRight();
 		height += currentHeight + getPaddingBottom();
 
-		setMeasuredDimension(resolveSize(width, widthMeasureSpec),
+		setMeasuredDimension(resolveSize(width + 1000, widthMeasureSpec),
 				resolveSize(height, heightMeasureSpec));
 	}
 	
@@ -60,7 +60,7 @@ public class SlidingLayout extends ViewGroup {
 		for (int i = 0; i < count; i++) {
 			View child = getChildAt(i);
 			LayoutParams lp = (LayoutParams) child.getLayoutParams();
-			child.layout(lp.x * 2, lp.y, lp.x + child.getMeasuredWidth(), lp.y + child.getMeasuredHeight());
+			child.layout(lp.x, lp.y, lp.x + child.getMeasuredWidth(), lp.y + child.getMeasuredHeight());
 		}
 	}
 
