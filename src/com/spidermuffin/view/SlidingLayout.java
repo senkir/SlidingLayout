@@ -1,18 +1,42 @@
 package com.spidermuffin.view;
 
+import com.test.slidinglayout.R;
+
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 
 public class SlidingLayout extends HorizontalScrollView {
 
 	int _pages;
+	int _currentPage;
+	ViewGroup _childContainer; //used for paging
 	
 	public SlidingLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		
+    	//disable manual sliding
+    	setOnTouchListener( new OnTouchListener(){ 
+
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				return true;
+			}
+    	});
 		//custom attributes go here if i ever need them
+    	_currentPage = 0; //base 0
 	}
+	
+	@Override
+	protected void onFinishInflate() {
+		super.onFinishInflate();
+		_childContainer = (ViewGroup) findViewById(R.id.sliding_layout_parent);
+		_pages = _childContainer.getChildCount();
+	}
+	
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
@@ -23,23 +47,42 @@ public class SlidingLayout extends HorizontalScrollView {
 	 * does the effect "back a page"
 	 */
 	public void previous(boolean smoothEnabled) {
-		if (smoothEnabled) {
-			this.smoothScrollTo(0, 0);
-		} else {
-			this.scrollTo(0, 0);
+		int scrollAmount = 0;
+		if (_currentPage == 0) {
+			//we're at min
+			next(smoothEnabled); ///bounce
+			return;
 		}
+		
+		scrollAmount = getScrollX() - _childContainer.getChildAt(_currentPage).getMeasuredWidth();
+		if (smoothEnabled) {
+			this.smoothScrollTo(scrollAmount, 0);
+		} else {
+			this.scrollTo(scrollAmount, 0);
+		}
+		
+		_currentPage -= 1;
 	}
 
 	/**
 	 * does the effect "forward a page"
 	 */
 	public void next(boolean smoothEnabled) {
-		int pageWidth = this.getWidth();
-		if (smoothEnabled) {
-			this.smoothScrollTo(pageWidth, 0);
-		} else {
-			this.scrollTo(pageWidth, 0);
+		int scrollAmount = 0;
+		if (_currentPage == _pages - 1) {
+			//we're at max
+			previous(smoothEnabled); ///bounce
+			return;
 		}
+		
+		scrollAmount = getScrollX() + _childContainer.getChildAt(_currentPage).getMeasuredWidth();
+		if (smoothEnabled) {
+			this.smoothScrollTo(scrollAmount, 0);
+		} else {
+			this.scrollTo(scrollAmount, 0);
+		}
+		
+		_currentPage += 1;
 	}
 	
 }

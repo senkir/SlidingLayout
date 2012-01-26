@@ -1,18 +1,15 @@
 package com.test.slidinglayout;
 
-import com.spidermuffin.view.SlidingLayout;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.WindowManager;
-import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+
+import com.spidermuffin.view.SlidingLayout;
 
 public class SlidingLayoutActivity extends Activity {
 	protected static final float LEFT_LAYOUT_PERCENT_OF_SCREEN = 0.8f;
@@ -36,27 +33,18 @@ public class SlidingLayoutActivity extends Activity {
 		final Display m = w.getDefaultDisplay();
 		final DisplayMetrics dm = new DisplayMetrics();
 		m.getMetrics(dm);
-    	int width = m.getWidth();
+    	int screenWidth = m.getWidth();
+    	
     	LinearLayout leftLayout = (LinearLayout) findViewById(R.id.left_layout);
     	leftLayout.setMinimumHeight(m.getHeight());
-    	leftLayout.setMinimumWidth((int) (m.getWidth() * LEFT_LAYOUT_PERCENT_OF_SCREEN));
-//    	int leftWidth = (int) Math.floor(width * LEFT_LAYOUT_PERCENT_OF_SCREEN);
-//    	leftLayout.setLayoutParams(new SlidingLayout.LayoutParams(width , LayoutParams.MATCH_PARENT));
-    	LinearLayout rightLayout = (LinearLayout) findViewById(R.id.right_layout);
-    	rightLayout.setMinimumHeight(m.getHeight());
-    	rightLayout.setMinimumWidth((int) (m.getWidth()));
+    	leftLayout.setMinimumWidth((int) (screenWidth * LEFT_LAYOUT_PERCENT_OF_SCREEN));
 
-//    	rightLayout.setLayoutParams(new SlidingLayout.LayoutParams(width, LayoutParams.MATCH_PARENT));
+    	LinearLayout centerLayout = (LinearLayout) findViewById(R.id.center_layout);
+    	leftLayout.setMinimumHeight(m.getHeight());
+    	centerLayout.setMinimumWidth((int) (screenWidth));
     	
-    	HorizontalScrollView parent = (HorizontalScrollView) findViewById(R.id.test_scroll_view);
-    	parent.setOnTouchListener(null);
-    	parent.setOnTouchListener( new OnTouchListener(){ 
-
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				return true;
-			}
-    	});
+    	LinearLayout rightLayout = (LinearLayout) findViewById(R.id.right_layout);
+    	rightLayout.setMinimumWidth((int) (screenWidth * LEFT_LAYOUT_PERCENT_OF_SCREEN));
 
     }
     

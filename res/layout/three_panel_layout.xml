@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spidermuffin.view.SlidingLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_scroll_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+	<TableLayout android:id="@+id/table_layout"
+	    android:layout_width="wrap_content" android:layout_height="match_parent"
+	    >
+		<TableRow android:id="@+id/sliding_layout_parent"
+		    android:layout_width="wrap_content" android:layout_height="match_parent">
+		    
+			<!-- Left -->
+			<LinearLayout 
+			    android:id="@+id/left_layout" 
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+			   </LinearLayout>
+			
+			<!--  Center -->
+			<LinearLayout 
+			    android:id="@+id/center_layout"
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ffff00"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+ 			   	 <Button android:layout_weight="1"
+ 			   	     android:layout_width="0dp" android:layout_height="wrap_content" android:text="previous" android:onClick="previous"/>
+ 			   	 <Button android:layout_weight="1"
+ 			   	     android:layout_width="0dp" android:layout_height="wrap_content" android:text="next" android:onClick="next"/>
+			</LinearLayout>
+			
+			<!--  Right -->
+			<LinearLayout 
+			    android:id="@+id/right_layout"
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+			</LinearLayout>
+		</TableRow>
+	</TableLayout>
+</com.spidermuffin.view.SlidingLayout>
