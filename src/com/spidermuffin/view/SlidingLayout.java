@@ -38,13 +38,24 @@ public class SlidingLayout extends HorizontalScrollView {
 	}
 	
 	@Override
+	protected void onLayout(boolean changed, int l, int t, int r, int b) {
+		super.onLayout(changed, l, t, r, b);
+		if (changed) {
+			//TC: these values assume a 3 panel layout
+			_currentPage = 1;
+			scrollTo(_childContainer.getChildAt(0).getMeasuredWidth(), 0);
+		}
+	}
+	
+	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
 		super.onSizeChanged(w, h, oldw, oldh);
 		
 	}
 	
 	/**
-	 * does the effect "back a page"
+	 * does the effect "back a page".
+	 * If we are at the first page it will peform a {@link next()} action.
 	 */
 	public void previous(boolean smoothEnabled) {
 		int scrollAmount = 0;
@@ -65,7 +76,8 @@ public class SlidingLayout extends HorizontalScrollView {
 	}
 
 	/**
-	 * does the effect "forward a page"
+	 * does the effect "forward a page"	 
+	 * If we are at the last page it will peform a {@link previous()} action.
 	 */
 	public void next(boolean smoothEnabled) {
 		int scrollAmount = 0;
