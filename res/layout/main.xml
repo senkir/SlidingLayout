@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<HorizontalScrollView 
+<com.spidermuffin.view.SlidingLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/test_scroll_view"
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
-    <!-- <com.spidermuffin.view.SlidingLayout 
-        android:id="@+id/test_linear_layout_view"
-        android:orientation="horizontal"
-		android:background="@android:color/holo_blue_bright"
-        android:layout_gravity="center"
-		android:layout_width="wrap_content"
-		android:layout_height="match_parent"> -->
-		  <TableLayout android:id="@+id/table_layout"
-		      android:layout_width="wrap_content" android:layout_height="match_parent"
-		      >
-			 <TableRow android:layout_width="wrap_content" android:layout_height="match_parent">
-				  <!-- Left -->
-				  <LinearLayout 
-				      android:id="@+id/left_layout" 
-				      android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
-				      android:layout_width="wrap_content" android:layout_height="match_parent">
-			      	 <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="left view" android:gravity="center"
-			          />	      
-			      </LinearLayout>
-			 
-				  <!--  Right -->
-				  <LinearLayout 
-				      android:id="@+id/right_layout"
-				      android:orientation="vertical" android:layout_gravity="center" android:background="#ffff00"
-				      android:layout_width="wrap_content" android:layout_height="match_parent">
-		   		      <TextView android:layout_width="wrap_content" android:layout_height="match_parent" android:text="right view" android:gravity="center"
-		   		          />
-				  </LinearLayout>
-			 </TableRow>
-		  </TableLayout>
-      <!-- </com.spidermuffin.view.SlidingLayout> -->
-</HorizontalScrollView>
+	<TableLayout android:id="@+id/table_layout"
+	    android:layout_width="wrap_content" android:layout_height="match_parent"
+	    >
+		<TableRow android:layout_width="wrap_content" android:layout_height="match_parent">
+		    
+			<!-- Left -->
+			<LinearLayout 
+			    android:id="@+id/left_layout" 
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+			   	 <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="next" android:onClick="next"/>
+			   </LinearLayout>
+			
+			<!--  Center -->
+			<LinearLayout 
+			    android:id="@+id/right_layout"
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ffff00"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+ 			   	 <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="previous" android:onClick="previous"/>
+			</LinearLayout>
+			
+			
+		</TableRow>
+	</TableLayout>
+</com.spidermuffin.view.SlidingLayout>
