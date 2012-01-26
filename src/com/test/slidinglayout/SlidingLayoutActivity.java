@@ -36,10 +36,13 @@ public class SlidingLayoutActivity extends Activity {
     	int width = m.getWidth();
     	LinearLayout leftLayout = (LinearLayout) findViewById(R.id.left_layout);
     	leftLayout.setMinimumHeight(m.getHeight());
+    	leftLayout.setMinimumWidth((int) (m.getWidth() * LEFT_LAYOUT_PERCENT_OF_SCREEN));
 //    	int leftWidth = (int) Math.floor(width * LEFT_LAYOUT_PERCENT_OF_SCREEN);
 //    	leftLayout.setLayoutParams(new SlidingLayout.LayoutParams(width , LayoutParams.MATCH_PARENT));
     	LinearLayout rightLayout = (LinearLayout) findViewById(R.id.right_layout);
     	rightLayout.setMinimumHeight(m.getHeight());
+    	rightLayout.setMinimumWidth((int) (m.getWidth()));
+
 //    	rightLayout.setLayoutParams(new SlidingLayout.LayoutParams(width, LayoutParams.MATCH_PARENT));
     	
 //    	SlidingLayout parent = (SlidingLayout) findViewById(R.id.test_linear_layout_view);
