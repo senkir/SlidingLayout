@@ -33,7 +33,7 @@ public class SlidingLayout extends HorizontalScrollView {
 	
 	public SlidingLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		
+		setHorizontalScrollBarEnabled(false);
     	//disable manual sliding
     	setOnTouchListener( new OnTouchListener(){
 
