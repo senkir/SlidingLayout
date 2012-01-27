@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.spidermuffin.view.SlidingLayout
+<com.spidermuffin.slidinglayout.view.SlidingLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/test_scroll_view"
+    android:id="@+id/sm_scroll_view"
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
-		<TableRow android:id="@+id/sliding_layout_parent"
+		<TableRow android:id="@+id/sm_sliding_layout_parent"
 		    android:layout_width="wrap_content" android:layout_height="match_parent">
 		    
 			<!-- Left -->
 			<LinearLayout 
-			    android:id="@+id/left_layout" 
+			    android:id="@+id/sm_left_layout" android:visibility="invisible"
 			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
 			    android:layout_width="wrap_content" android:layout_height="match_parent">
 			   </LinearLayout>
 			
 			<!--  Center -->
 			<LinearLayout 
-			    android:id="@+id/center_layout"
+			    android:id="@+id/sm_center_layout"
 			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ffff00"
 			    android:layout_width="wrap_content" android:layout_height="match_parent">
  			   	 <Button android:layout_weight="1"
@@ -27,9 +27,9 @@
 			
 			<!--  Right -->
 			<LinearLayout 
-			    android:id="@+id/right_layout"
+			    android:id="@+id/sm_right_layout" android:visibility="invisible"
 			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
 			    android:layout_width="wrap_content" android:layout_height="match_parent">
 			</LinearLayout>
 		</TableRow>
-</com.spidermuffin.view.SlidingLayout>
+</com.spidermuffin.slidinglayout.view.SlidingLayout>
