@@ -7,7 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+/**
+ * Sample Left Hand fragment for {@link SlidingLayoutActivity}
+ * @author travischurchill
+ *
+ */
 public class LeftFragment extends Fragment {
 
 	@Override

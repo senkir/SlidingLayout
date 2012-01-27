@@ -17,7 +17,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 /**
- * Three Panel Sliding Layout
+ * Three Panel Sliding Layout which sends callback to {@link SlidingLayoutDelegate} if one is set up.
  * TODO: make this not dependent on an xml view
  * @author travischurchill
  *

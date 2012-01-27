@@ -7,7 +7,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import com.spidermuffin.slidinglayout.view.SlidingLayout;
 import com.spidermuffin.slidinglayout.R;
-
+/**
+ * Sample activity which manages interactions wiht the SlidingLayout
+ * @author travischurchill
+ *
+ */
 public class SlidingLayoutActivity extends FragmentActivity implements SlidingLayoutDelegate{
 	protected static final float LEFT_LAYOUT_PERCENT_OF_SCREEN = 0.8f;
 	protected static final String LEFT_FRAGMENT_TAG = "leftFragment";
