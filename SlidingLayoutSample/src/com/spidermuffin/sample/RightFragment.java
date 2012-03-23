@@ -17,30 +17,24 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
-package com.spidermuffin.slidinglayout;
-
-import com.spidermuffin.slidinglayout.R;
-
+package com.spidermuffin.sample;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.spidermuffin.controller.SlidingLayoutActivity;
+
 /**
- * Sample Left Hand fragment for {@link SlidingLayoutActivity}
+ * Sample Right Hand fragment for {@link SlidingLayoutActivity}
  * @author travischurchill
  *
  */
-public class LeftFragment extends Fragment {
-
-	@Override
-	public void onStart() {
-		super.onStart();
-	}
-	
+public class RightFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.sm_left_base_layout, container, false);
+		return inflater.inflate(R.layout.sample_right, container, false);
 	}
 }

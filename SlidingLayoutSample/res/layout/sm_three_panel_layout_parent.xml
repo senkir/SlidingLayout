@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 	
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sm_parent_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Fragment Zone -->
+    <LinearLayout 
+        android:id="@+id/sm_base_layout"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+    </LinearLayout>
+    
+    <!-- Overlay Layer -->
+    <include layout="@layout/sm_three_panel_layout"/>
+    
+    <!-- Hotspot layer -->
+    <LinearLayout    
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="match_parent">>
+        <Button 
+            android:id="@+id/sm_sliding_layout_left_touch_area" android:tag="leftTouchArea" android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:layout_weight="@integer/sliding_layout_peeking_view_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>
+        <LinearLayout 
+            android:id="@+id/sm_sliding_layout_center_touch_area"
+            android:layout_weight="@integer/sliding_layout_center_spacer_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>        
+        <Button 
+            android:id="@+id/sm_sliding_layout_right_touch_area" android:tag="rightTouchArea"  android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:layout_weight="@integer/sliding_layout_peeking_view_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>
+    </LinearLayout>
+</FrameLayout>

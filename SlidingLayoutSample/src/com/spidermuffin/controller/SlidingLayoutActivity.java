@@ -17,9 +17,7 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
-package com.spidermuffin.slidinglayout;
-
-import com.spidermuffin.slidinglayout.view.SlidingLayout;
+package com.spidermuffin.controller;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -30,6 +28,10 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import com.spidermuffin.sample.R;
+import com.spidermuffin.view.SlidingLayout;
+import com.spidermuffin.view.SlidingLayout.SlidingLayoutDelegate;
 
 /**
  * Sample activity which manages interactions with the SlidingLayout

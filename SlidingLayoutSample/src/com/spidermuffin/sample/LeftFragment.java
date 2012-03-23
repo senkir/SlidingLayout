@@ -17,15 +17,25 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
-package com.spidermuffin.slidinglayout;
+package com.spidermuffin.sample;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.spidermuffin.controller.SlidingLayoutActivity;
 /**
- * Objects which implement this will receive callbacks from the {@link SlidingLayout} to which they are a delegate.
+ * Sample Left Hand fragment for {@link SlidingLayoutActivity}
  * @author travischurchill
  *
  */
-public interface SlidingLayoutDelegate {
-	public void willHideLeftLayout();
-	public void willShowLeftLayout();
-	public void willHideRightLayout();
-	public void willShowRightLayout();
+public class LeftFragment extends Fragment {
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		return inflater.inflate(R.layout.sample_left, container, false);
+	}
 }

@@ -17,12 +17,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  */
-package com.spidermuffin.slidinglayout.view;
+package com.spidermuffin.view;
 
 import java.lang.ref.SoftReference;
-
-import com.spidermuffin.slidinglayout.R;
-import com.spidermuffin.slidinglayout.SlidingLayoutDelegate;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -30,10 +27,13 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+
+import com.spidermuffin.sample.R;
 
 /**
  * Three Panel Sliding Layout which sends callback to {@link SlidingLayoutDelegate} if one is set up.
@@ -46,7 +46,42 @@ public class SlidingLayout extends HorizontalScrollView {
 	// Constants
 	protected static final float LEFT_LAYOUT_PERCENT_OF_SCREEN = 0.9f;
 	protected static final int THREE_PANEL_CENTER_PAGE = 1;
-
+	
+	////////////////////////
+	// Delegate Interface
+	/**
+	 * Objects which implement this will receive callbacks from the {@link SlidingLayout} to which they are a delegate.
+	 * @author traviscastillo
+	 *
+	 */
+	public interface SlidingLayoutDelegate {
+		public void willHideCenterLayout();
+		public void willShowCenterLayout();
+		
+		/**
+		 * Notify that the left layout is about to be hidden.
+		 */
+		public void willHideLeftLayout();
+		/**
+		 * Notify that the left layout is about to appear.
+		 */
+		public void willShowLeftLayout();
+		/**
+		 * Notify that the right layout is about to be hidden.
+		 */
+		public void willHideRightLayout();
+		/**
+		 * Notify that the right layout is about to appear.
+		 */
+		public void willShowRightLayout();
+		
+		/**
+		 * Determines whether a touch event should allow the user to swipe.
+		 * @param View view touched
+		 * @return true if {@link SlidingLayout} should slide
+		 */
+		public boolean shouldAllowSlide(View v);
+	}
 	////////////////////////
 	// Fields
 	protected int _sideLayoutWidth = -1;
