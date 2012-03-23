@@ -182,10 +182,6 @@ public class SlidingLayout extends HorizontalScrollView {
 	 * Size child views so that they take up a portion of the available space.
 	 */
     protected void sizeChildViews() {
-//    	final WindowManager w = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-//		final Display m = w.getDefaultDisplay();
-//		final DisplayMetrics dm = new DisplayMetrics();
-//		m.getMetrics(dm);
 			//present as three panels
 			LinearLayout centerLayout = (LinearLayout) findViewById(R.id.sm_center_layout);
 			LinearLayout rightSpacer = (LinearLayout) findViewById(R.id.sm_right_spacer);
@@ -223,10 +219,6 @@ public class SlidingLayout extends HorizontalScrollView {
     
     public int getLeftSideLayoutWidthTwoPanel() {
     	if (_leftLayoutWidthTwoPanel < 0) {
-//        	final WindowManager w = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-//    		final Display m = w.getDefaultDisplay();
-//    		final DisplayMetrics dm = new DisplayMetrics();
-//    		m.getMetrics(dm);
     		int weight = getResources().getInteger(R.integer.sliding_layout_two_panel_left_weight);
     		_leftLayoutWidthTwoPanel = (int) (_display.getWidth() * (weight / 100.0f));
         	}
@@ -235,10 +227,6 @@ public class SlidingLayout extends HorizontalScrollView {
     
 	public int getCenterLayoutWidthTwoPanel() {
 		if (_centerLayoutWidthTwoPanel < 0) {
-//	    	final WindowManager w = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-//			final Display m = w.getDefaultDisplay();
-//			final DisplayMetrics dm = new DisplayMetrics();
-//			m.getMetrics(dm);
     		int weight = getResources().getInteger(R.integer.sliding_layout_two_panel_center_weight);
     		_centerLayoutWidthTwoPanel = (int) (_display.getWidth() * (weight /  100.0f));
         	}
@@ -248,10 +236,6 @@ public class SlidingLayout extends HorizontalScrollView {
     
     public int getSideLayoutWidth() {
     	if (_sideLayoutWidth < 0) {
-//    	final WindowManager w = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-//		final Display m = w.getDefaultDisplay();
-//		final DisplayMetrics dm = new DisplayMetrics();
-//		m.getMetrics(dm);
     	_sideLayoutWidth = (int) (_display.getWidth() * LEFT_LAYOUT_PERCENT_OF_SCREEN);
     	}
     	return _sideLayoutWidth;
@@ -316,37 +300,10 @@ public class SlidingLayout extends HorizontalScrollView {
 		_currentPage += 1;
 	}
 	
-//	/**
-//	 * does the effect "back a page"
-//	 */
-//	public void previous() {
-//		CCLogger.log("PaginationLayout:Scroll view will go back a page");
-//		_pageActive = (_pageActive > 0) ? _pageActive - 1 : 0;
-//		_scroll.smoothScrollTo(_pageActive * _scroll.getWidth(), 0);
-//		requestLayout();
-//	}
-//
-//	/**
-//	 * does the effect "forward a page"
-//	 */
-//	public void next() {
-//		CCLogger.log("PaginationLayout:Scroll view will go forward a page");
-//		int pageWidth = _scroll.getWidth();
-//		int nextPage = (_pageActive + 1) * pageWidth;
-//		if (nextPage - _scroll.getScrollX() <= pageWidth) {
-//			_scroll.smoothScrollTo(nextPage, 0);
-//			_pageActive++;
-//		} else {
-//			_scroll.smoothScrollTo(_scroll.getScrollX(), 0);
-//		}
-//		requestLayout();
-//	}
-	
 	@Override
 	protected void onScrollChanged(int l, int t, int oldl, int oldt) {
 		super.onScrollChanged(l, t, oldl, oldt);
 		if (getDelegate() != null) {
-//			CCLogger.log("scroll from " + oldl + " to " + l + "(scroll amount = " + _scrollToAmount + ")");
 			if (l == 0) {
 				Log.d(this.toString(), "scroll at zero");
 				//TC: 	the following numbers trigger the delegates when the scroll is 'near'
