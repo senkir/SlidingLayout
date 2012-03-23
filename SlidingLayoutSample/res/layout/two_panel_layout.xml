@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.spidermuffin.view.SlidingLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_scroll_view"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+	<TableLayout android:id="@+id/table_layout"
+	    android:layout_width="wrap_content" android:layout_height="match_parent"
+	    >
+		<TableRow android:layout_width="wrap_content" android:layout_height="match_parent">
+		    
+			<!-- Left -->
+			<LinearLayout 
+			    android:id="@+id/left_layout" 
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ff0000"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+			   </LinearLayout>
+			
+			<!--  Right -->
+			<LinearLayout 
+			    android:id="@+id/right_layout"
+			    android:orientation="horizontal" android:layout_gravity="center" android:background="#ffff00"
+			    android:layout_width="wrap_content" android:layout_height="match_parent">
+			</LinearLayout>
+		</TableRow>
+	</TableLayout>
+</com.spidermuffin.view.SlidingLayout>
