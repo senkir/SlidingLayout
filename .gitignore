@@ -1,0 +1,9 @@
+!.gitignore
+.metadata
+.metadata/
+*.DS_Store*
+SlidingLayout/bin
+SlidingLayout/gen
+SlidingLayoutSample/bin
+SlidingLayoutSample/gen
+**/bin
