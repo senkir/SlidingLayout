@@ -1,4 +1,7 @@
-1/24/12
+3/1/13
+Starting badly needed overhaul of project structure.  Old code available in v1.0 branch.
+
+1/24/12O
 This is a sample project for a three panel layout view which will slide horizontally upon the pressing of a button.
 It uses the compatibility library in order to support pre-3.0 versions of Android.  
 
