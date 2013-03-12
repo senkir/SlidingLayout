@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<resources>
+    <!-- base -->
+    <item name="sl_frame" type="id"/>
+
+    <!-- touch -->
+    <item name="sl_left_touch" type="id"/>
+    <item name="sl_center_touch" type="id"/>
+    <item name="sl_right_touch" type="id"/>
+
+    <!-- Sliding Layout -->
+    <item name="sl_sliding_image" type="id"/>
+    <item name="sl_scrolling_view" type="id"/>
+
+    <item name="cc_sliding_layout_center_area" type="id"/>
+
+    <item name="sl_sliding_layout_parent" type="id"/>
+    <item name="sl_two_panel_container" type="id"/>
+
+    <item name="sl_left_spacer" type="id"/>
+    <item name="sl_right_spacer" type="id"/>
+
+    <item name="sl_layout_banner" type="id"/>
+
+    <item name="sl_center_layout" type="id"/>
+    <item name="sl_left_layout" type="id"/>
+    <item name="sl_right_layout" type="id"/>
+
+</resources>

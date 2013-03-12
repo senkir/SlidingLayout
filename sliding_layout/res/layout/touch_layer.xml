@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:baselineAligned="false"
+              android:orientation="horizontal"
+              android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button
+            android:id="@id/sl_left_touch" android:tag="leftTouchArea" android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:layout_weight="@integer/sliding_layout_peeking_view_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>
+    <LinearLayout
+            android:id="@id/sl_center_touch"
+            android:layout_weight="@integer/sliding_layout_center_spacer_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>
+    <Button
+            android:id="@id/sl_right_touch" android:tag="rightTouchArea"  android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:layout_weight="@integer/sliding_layout_peeking_view_weight"
+            android:layout_width="0dp" android:layout_height="match_parent"/>
+</LinearLayout>

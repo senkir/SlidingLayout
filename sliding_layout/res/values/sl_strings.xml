@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<resources>
+    <string name="sl_application">sliding_layout</string>
+    <string name="shadow_description">sliding_layout_shadow</string>
+    <string name="sliding_image_description">sliding image</string>
+    <string name="right_fragment_tag">rightFragment</string>
+    <!--tags-->
+    <string name="left_fragment_tag">leftFragment</string>
+    <string name="center_fragment_tag">centerFragment</string>
+    <string name="left_touch_tag">leftTouch</string>
+    <string name="right_touch_tag">rightTouch</string>
+</resources>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-       <!-- Sliding Layout Settings -->
-    <integer name="sliding_layout_drawer_weight">90</integer>
-    <integer name="sliding_layout_peeking_view_weight">10</integer>
-    <integer name="sliding_layout_center_spacer_weight">80</integer>
-    <integer name="sliding_layout_two_panel_left_weight">40</integer>
-    <integer name="sliding_layout_two_panel_center_weight">60</integer> 
-</resources>

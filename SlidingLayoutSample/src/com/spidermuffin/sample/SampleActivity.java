@@ -2,9 +2,10 @@ package com.spidermuffin.sample;
 
 import android.support.v4.app.Fragment;
 
+import android.support.v4.app.FragmentActivity;
 import com.spidermuffin.controller.SlidingLayoutActivity;
 
-public class SampleActivity extends SlidingLayoutActivity {
+public class SampleActivity extends FragmentActivity {
 
 	@Override
 	protected Fragment getLeftFragment() {

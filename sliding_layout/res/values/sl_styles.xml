@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<resources>
+    <!-- default styles -->
+    <item name="com.crowdcompass.slidinglayout:slLeftShadowAsset" format="reference">@drawable/shadow_left</item>
+    <item name="com.crowdcompass.slidinglayout:slRightShadowAsset" format="reference">@drawable/shadow_right</item>
+
+    <item name="com.crowdcompass.slidinglayout:slLeftLayout" format="reference">@layout/sl_default_left</item>
+    <item name="com.crowdcompass.slidinglayout:slCenterLayout">@layout/sl_default_center</item>
+    <item name="com.crowdcompass.slidinglayout:slRightLayout">@layout/sl_default_right</item>
+</resources>

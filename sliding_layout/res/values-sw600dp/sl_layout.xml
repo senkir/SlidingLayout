@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<resources>
+    <item name="content_layer" type="layout">@layout/tablet_view_three_panel_layout</item>
+    <item name="sliding_layer_content" type="layout">@layout/sl_tablet_sliding_panel</item>
+
+</resources>

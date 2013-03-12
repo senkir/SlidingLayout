@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2009-2012 CrowdCompass, Inc.
+  -->
+
+<resources>
+    <!-- custom drawables -->
+    <attr name="slLeftShadowAsset" format="reference"/>
+    <attr name="slRightShadowAsset" format="reference"/>
+
+    <!-- configurable layout elements -->
+    <attr name="slThreePanelLayout" format="reference"/>
+    <attr name="slTwoPanelLayout" format="reference"/>
+
+    <attr name="slLeftLayout" format="reference"/>
+    <attr name="slCenterLayout" format="reference"/>
+    <attr name="slRightLayout" format="reference"/>
+
+    <!-- Views -->
+
+    <declare-styleable name="SlidingLayout">
+        <attr name="mode" format="enum" default="phone">
+            <enum name="phone" value="0"/>
+            <enum name="tablet" value="1"/>
+        </attr>
+        <attr name="left_layout" format="reference" default=""/>
+        <attr name="right_layout" format="reference"/>
+        <attr name="center_layout" format="reference"/>
+    </declare-styleable>
+</resources>
